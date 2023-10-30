@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://clnw4wahi4wsd"
-path="res://.godot/imported/Stylized.fbx-819dd99d9b2cbd3175825444c34bee62.scn"
+path="res://.godot/imported/Stylized.fbx-33c6b17cb6b72075a4de64848ca67771.scn"
 
 [deps]
 
-source_file="res://Stylized.fbx"
-dest_files=["res://.godot/imported/Stylized.fbx-819dd99d9b2cbd3175825444c34bee62.scn"]
+source_file="res://Brian/Stylized.fbx"
+dest_files=["res://.godot/imported/Stylized.fbx-33c6b17cb6b72075a4de64848ca67771.scn"]
 
 [params]
 

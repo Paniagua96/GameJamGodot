@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bk80is5afd1i0"
-path="res://.godot/imported/Character.glb-c77ffb67d3c4156a6d6c71a21a539e18.scn"
+uid="uid://imdrpy2ek256"
+path="res://.godot/imported/Anim_Cha_Idle.fbx-52aba65fd3d103ee3bfe114e18727059.scn"
 
 [deps]
 
-source_file="res://'main/assets/Character/Character.glb"
-dest_files=["res://.godot/imported/Character.glb-c77ffb67d3c4156a6d6c71a21a539e18.scn"]
+source_file="res://'main/assets/Anims/Anim_Cha_Idle.fbx"
+dest_files=["res://.godot/imported/Anim_Cha_Idle.fbx-52aba65fd3d103ee3bfe114e18727059.scn"]
 
 [params]
 
@@ -28,12 +28,5 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"materials": {
-"Mat_Chars": {
-"use_external/enabled": true,
-"use_external/path": "res://'main/assets/Character/Mat_Character.tres"
-}
-}
-}
+_subresources={}
 gltf/embedded_image_handling=1

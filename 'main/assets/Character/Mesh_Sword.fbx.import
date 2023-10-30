@@ -3,20 +3,20 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bk80is5afd1i0"
-path="res://.godot/imported/Character.glb-c77ffb67d3c4156a6d6c71a21a539e18.scn"
+uid="uid://cujal38yij2o8"
+path="res://.godot/imported/Mesh_Sword.fbx-b49bcd1ddb4e159b08569d6e4f9a8487.scn"
 
 [deps]
 
-source_file="res://'main/assets/Character/Character.glb"
-dest_files=["res://.godot/imported/Character.glb-c77ffb67d3c4156a6d6c71a21a539e18.scn"]
+source_file="res://'main/assets/Character/Mesh_Sword.fbx"
+dest_files=["res://.godot/imported/Mesh_Sword.fbx-b49bcd1ddb4e159b08569d6e4f9a8487.scn"]
 
 [params]
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
-nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/apply_root_scale=false
+nodes/root_scale=100.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -30,7 +30,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Mat_Chars": {
+"lambert1": {
 "use_external/enabled": true,
 "use_external/path": "res://'main/assets/Character/Mat_Character.tres"
 }
