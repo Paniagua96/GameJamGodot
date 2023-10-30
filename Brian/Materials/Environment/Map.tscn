@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://s7h5g2filvwv"]
+
+[ext_resource type="PackedScene" uid="uid://clnw4wahi4wsd" path="res://Stylized.fbx" id="1_nntvp"]
+
+[node name="Stylized" instance=ExtResource("1_nntvp")]
+
+[node name="House_001" parent="RootNode" index="21"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -1.07642, 2.0513, -23.6716)
+
+[node name="House_002" parent="RootNode" index="23"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.0125186, 2.38419e-07, -30.472)
