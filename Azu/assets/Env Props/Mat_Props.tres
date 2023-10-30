@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cxjgswotlnubk"]
-
-[ext_resource type="Texture2D" uid="uid://bm05gc1a1xnwq" path="res://'main/assets/Env Props/Map_EnvProps.jpg" id="1_eyahv"]
-
-[resource]
-albedo_texture = ExtResource("1_eyahv")
