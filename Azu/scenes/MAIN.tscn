@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7ag3git2fvi"]
+
+[ext_resource type="PackedScene" uid="uid://dukwjwh24qlnd" path="res://main/scenes/Scn_Env.tscn" id="1_hy2ol"]
+[ext_resource type="PackedScene" uid="uid://74qrkdrp7pah" path="res://main/scenes/Scn_Character.tscn" id="2_k6q64"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Mesh_Stylized" parent="." instance=ExtResource("1_hy2ol")]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_k6q64")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.2546, 0, 3.82848)
