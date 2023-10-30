@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<<< HEAD:Azu/assets/Env Props/Mesh_Character.fbx.import
 uid="uid://cehqvibdjccq3"
 path="res://.godot/imported/Mesh_Character.fbx-1bacddc7bc2044eb7396a3f41fc9b4bd.scn"
 
@@ -10,6 +11,15 @@ path="res://.godot/imported/Mesh_Character.fbx-1bacddc7bc2044eb7396a3f41fc9b4bd.
 
 source_file="res://Azu/assets/Env Props/Mesh_Character.fbx"
 dest_files=["res://.godot/imported/Mesh_Character.fbx-1bacddc7bc2044eb7396a3f41fc9b4bd.scn"]
+========
+uid="uid://ki4anxjakoko"
+path="res://.godot/imported/Mesh_Cha_Tpose.fbx-9ac0e3a258a73b449435749c45375bf2.scn"
+
+[deps]
+
+source_file="res://Brian/Started DeosKit/Anims/Mesh_Cha_Tpose.fbx"
+dest_files=["res://.godot/imported/Mesh_Cha_Tpose.fbx-9ac0e3a258a73b449435749c45375bf2.scn"]
+>>>>>>>> 2c6af23351351802c45beb2ab49d80b3bee789ee:Brian/Started DeosKit/Anims/Mesh_Cha_Tpose.fbx.import
 
 [params]
 

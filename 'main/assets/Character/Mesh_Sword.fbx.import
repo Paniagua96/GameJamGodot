@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<<< HEAD:'main/assets/Character/Mesh_Sword.fbx.import
 uid="uid://cujal38yij2o8"
 path="res://.godot/imported/Mesh_Sword.fbx-b49bcd1ddb4e159b08569d6e4f9a8487.scn"
 
@@ -10,6 +11,15 @@ path="res://.godot/imported/Mesh_Sword.fbx-b49bcd1ddb4e159b08569d6e4f9a8487.scn"
 
 source_file="res://'main/assets/Character/Mesh_Sword.fbx"
 dest_files=["res://.godot/imported/Mesh_Sword.fbx-b49bcd1ddb4e159b08569d6e4f9a8487.scn"]
+========
+uid="uid://doead7w1xafm0"
+path="res://.godot/imported/Anim_Cha_Defend.fbx-cb5fe9d49a6c693075a4cad9449a2260.scn"
+
+[deps]
+
+source_file="res://Brian/Started DeosKit/Anims/Anim_Cha_Defend.fbx"
+dest_files=["res://.godot/imported/Anim_Cha_Defend.fbx-cb5fe9d49a6c693075a4cad9449a2260.scn"]
+>>>>>>>> 2c6af23351351802c45beb2ab49d80b3bee789ee:Brian/Started DeosKit/Anims/Anim_Cha_Defend.fbx.import
 
 [params]
 

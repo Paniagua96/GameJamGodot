@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://wqhsr0jhdp2o"]
+
+[ext_resource type="PackedScene" uid="uid://dkglgpvwg40tr" path="res://Azu/assets/Env Props/Mesh_Stylized.fbx" id="1_5htwa"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Mesh_Stylized" parent="." instance=ExtResource("1_5htwa")]
+
+[node name="SignPointer" parent="Mesh_Stylized/RootNode" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.94885, 0, 8.30644)
+
+[node name="Cart" parent="Mesh_Stylized/RootNode" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0127, -1.19209e-07, 4.28215)
+
+[node name="Mushroom_A" parent="Mesh_Stylized/RootNode" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04091, -5.96046e-07, -5.19674)
+
+[node name="House" parent="Mesh_Stylized/RootNode" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.11203, 3.46835, -16.8594)
+
+[editable path="Mesh_Stylized"]

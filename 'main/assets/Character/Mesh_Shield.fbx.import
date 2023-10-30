@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<<< HEAD:'main/assets/Character/Mesh_Shield.fbx.import
 uid="uid://bx2gwqlrpu1te"
 path="res://.godot/imported/Mesh_Shield.fbx-db2158cb08940f1cb558755bda313b25.scn"
 
@@ -10,6 +11,15 @@ path="res://.godot/imported/Mesh_Shield.fbx-db2158cb08940f1cb558755bda313b25.scn
 
 source_file="res://'main/assets/Character/Mesh_Shield.fbx"
 dest_files=["res://.godot/imported/Mesh_Shield.fbx-db2158cb08940f1cb558755bda313b25.scn"]
+========
+uid="uid://c85orv81oq4i6"
+path="res://.godot/imported/Anim_Cha_Attack.fbx-b23c3641e369ab594f70c585190a0bd2.scn"
+
+[deps]
+
+source_file="res://Brian/Started DeosKit/Anims/Anim_Cha_Attack.fbx"
+dest_files=["res://.godot/imported/Anim_Cha_Attack.fbx-b23c3641e369ab594f70c585190a0bd2.scn"]
+>>>>>>>> 2c6af23351351802c45beb2ab49d80b3bee789ee:Brian/Started DeosKit/Anims/Anim_Cha_Attack.fbx.import
 
 [params]
 

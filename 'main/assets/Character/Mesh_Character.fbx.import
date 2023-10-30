@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<<< HEAD:'main/assets/Character/Mesh_Character.fbx.import
 uid="uid://7r2spqhc5tj"
 path="res://.godot/imported/Mesh_Character.fbx-33edaccde5184622dd6ba37eb6a5b2af.scn"
 
@@ -10,6 +11,15 @@ path="res://.godot/imported/Mesh_Character.fbx-33edaccde5184622dd6ba37eb6a5b2af.
 
 source_file="res://'main/assets/Character/Mesh_Character.fbx"
 dest_files=["res://.godot/imported/Mesh_Character.fbx-33edaccde5184622dd6ba37eb6a5b2af.scn"]
+========
+uid="uid://b0mv7hdtciheh"
+path="res://.godot/imported/Mesh_Character.fbx-442d9dc88aa397afc2d55c4d22674ae5.scn"
+
+[deps]
+
+source_file="res://'main/assets/Env Props/Mesh_Character.fbx"
+dest_files=["res://.godot/imported/Mesh_Character.fbx-442d9dc88aa397afc2d55c4d22674ae5.scn"]
+>>>>>>>> 2c6af23351351802c45beb2ab49d80b3bee789ee:'main/assets/Env Props/Mesh_Character.fbx.import
 
 [params]
 

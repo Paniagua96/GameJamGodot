@@ -3,6 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<<< HEAD:Azu/assets/Character/Mesh_Shield.fbx.import
 uid="uid://dx2l0w54xi2dq"
 path="res://.godot/imported/Mesh_Shield.fbx-05a8dcc99db9250039b89acae274353f.scn"
 
@@ -10,6 +11,15 @@ path="res://.godot/imported/Mesh_Shield.fbx-05a8dcc99db9250039b89acae274353f.scn
 
 source_file="res://Azu/assets/Character/Mesh_Shield.fbx"
 dest_files=["res://.godot/imported/Mesh_Shield.fbx-05a8dcc99db9250039b89acae274353f.scn"]
+========
+uid="uid://byvhtxhtpa3se"
+path="res://.godot/imported/Mesh_Shield.fbx-a05895e7752755165bed3575da393419.scn"
+
+[deps]
+
+source_file="res://Brian/Started DeosKit/Character/Mesh_Shield.fbx"
+dest_files=["res://.godot/imported/Mesh_Shield.fbx-a05895e7752755165bed3575da393419.scn"]
+>>>>>>>> 2c6af23351351802c45beb2ab49d80b3bee789ee:Brian/Started DeosKit/Character/Mesh_Shield.fbx.import
 
 [params]
 
