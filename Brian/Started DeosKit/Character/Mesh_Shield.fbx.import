@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://byvhtxhtpa3se"
-path="res://.godot/imported/Mesh_Shield.fbx-45cb099f48172d5b5dfa8b206a96deb5.scn"
+path="res://.godot/imported/Mesh_Shield.fbx-a05895e7752755165bed3575da393419.scn"
 
 [deps]
 
-source_file="res://Started DeosKit/Character/Mesh_Shield.fbx"
-dest_files=["res://.godot/imported/Mesh_Shield.fbx-45cb099f48172d5b5dfa8b206a96deb5.scn"]
+source_file="res://Brian/Started DeosKit/Character/Mesh_Shield.fbx"
+dest_files=["res://.godot/imported/Mesh_Shield.fbx-a05895e7752755165bed3575da393419.scn"]
 
 [params]
 

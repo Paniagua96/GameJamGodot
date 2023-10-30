@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bgwit5jrup8g4"
-path="res://.godot/imported/Anim_Cha_Walk.fbx-e4b4627a704fe18bac19676c110f3a3e.scn"
+path="res://.godot/imported/Anim_Cha_Walk.fbx-3905dcdec4123ea3b83db36c7819d911.scn"
 
 [deps]
 
-source_file="res://Started DeosKit/Anims/Anim_Cha_Walk.fbx"
-dest_files=["res://.godot/imported/Anim_Cha_Walk.fbx-e4b4627a704fe18bac19676c110f3a3e.scn"]
+source_file="res://Brian/Started DeosKit/Anims/Anim_Cha_Walk.fbx"
+dest_files=["res://.godot/imported/Anim_Cha_Walk.fbx-3905dcdec4123ea3b83db36c7819d911.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bth7ljng46ti3"
-path="res://.godot/imported/Mesh_Sword.fbx-7f4e825460c1acde626a57f840f5e675.scn"
+path="res://.godot/imported/Mesh_Sword.fbx-bb8abbb6026990d17fd1fdebc6a7bcfc.scn"
 
 [deps]
 
-source_file="res://Started DeosKit/Character/Mesh_Sword.fbx"
-dest_files=["res://.godot/imported/Mesh_Sword.fbx-7f4e825460c1acde626a57f840f5e675.scn"]
+source_file="res://Brian/Started DeosKit/Character/Mesh_Sword.fbx"
+dest_files=["res://.godot/imported/Mesh_Sword.fbx-bb8abbb6026990d17fd1fdebc6a7bcfc.scn"]
 
 [params]
 

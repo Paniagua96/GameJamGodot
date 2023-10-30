@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c85orv81oq4i6"
-path="res://.godot/imported/Anim_Cha_Attack.fbx-942f64e0b6282f7faae6ea1d6ef4eac0.scn"
+path="res://.godot/imported/Anim_Cha_Attack.fbx-b23c3641e369ab594f70c585190a0bd2.scn"
 
 [deps]
 
-source_file="res://Started DeosKit/Anims/Anim_Cha_Attack.fbx"
-dest_files=["res://.godot/imported/Anim_Cha_Attack.fbx-942f64e0b6282f7faae6ea1d6ef4eac0.scn"]
+source_file="res://Brian/Started DeosKit/Anims/Anim_Cha_Attack.fbx"
+dest_files=["res://.godot/imported/Anim_Cha_Attack.fbx-b23c3641e369ab594f70c585190a0bd2.scn"]
 
 [params]
 
