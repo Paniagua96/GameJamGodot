@@ -32,7 +32,7 @@ _subresources={
 "materials": {
 "Mat_Chars": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/Character/Mat_Character.tres"
+"use_external/path": "res://Azu/assets/Character/Mat_Character.tres"
 }
 }
 }
