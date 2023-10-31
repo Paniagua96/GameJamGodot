@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@onready var mesh = $Mesh_Cha_Tpose
+@onready var mesh = $Char_Anims
 @export var rotationSpeed = .15
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5

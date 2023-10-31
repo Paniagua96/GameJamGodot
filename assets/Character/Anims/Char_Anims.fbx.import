@@ -1,15 +1,15 @@
 [remap]
 
-importer="animation_library"
+importer="scene"
 importer_version=1
-type="AnimationLibrary"
+type="PackedScene"
 uid="uid://dgwl30r055kwp"
-path="res://.godot/imported/Char_Anims.fbx-cc7648f68e87ad278b89226cffe5a2b3.res"
+path="res://.godot/imported/Char_Anims.fbx-cc7648f68e87ad278b89226cffe5a2b3.scn"
 
 [deps]
 
 source_file="res://assets/Character/Anims/Char_Anims.fbx"
-dest_files=["res://.godot/imported/Char_Anims.fbx-cc7648f68e87ad278b89226cffe5a2b3.res"]
+dest_files=["res://.godot/imported/Char_Anims.fbx-cc7648f68e87ad278b89226cffe5a2b3.scn"]
 
 [params]
 
