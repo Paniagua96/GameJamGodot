@@ -1,11 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://gw35c7bfu8yt"]
+[gd_scene load_steps=2 format=3 uid="uid://gw35c7bfu8yt"]
 
 [ext_resource type="PackedScene" uid="uid://dukwjwh24qlnd" path="res://scenes/Scn_Env.tscn" id="1_fs22v"]
-[ext_resource type="PackedScene" uid="uid://cfya40vpq2xsp" path="res://assets/Character/Anims/Anim_Cha_Defend.fbx" id="3_o8y53"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Scn - Env" parent="." instance=ExtResource("1_fs22v")]
-
-[node name="Anim_Cha_Defend" parent="." instance=ExtResource("3_o8y53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84704, 0.0013383, -0.0067296)
