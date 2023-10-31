@@ -112,4 +112,7 @@ bone_idx = 61
 [node name="Mesh_Sword" parent="Char_Anims/RootNode/Char_Anims/GeneralSkeleton/BA_Weapon" instance=ExtResource("3_4m2j1")]
 transform = Transform3D(-0.226022, 0.974122, 1.49012e-08, -0.974122, -0.226022, 0, 0, -1.49012e-08, 1, 0, 0, 0)
 
+[node name="AnimationPlayer" parent="Char_Anims" index="1"]
+playback_default_blend_time = 0.1
+
 [editable path="Char_Anims"]
