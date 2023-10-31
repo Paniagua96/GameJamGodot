@@ -28,5 +28,17 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Mat_Chars": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Character/Mat_Character.tres"
+}
+},
+"nodes": {
+"PATH:RootNode/Armatures/Skeleton3D": {
+"retarget/bone_map": Resource("res://_NoShare/new_bone_map.tres")
+}
+}
+}
 gltf/embedded_image_handling=1

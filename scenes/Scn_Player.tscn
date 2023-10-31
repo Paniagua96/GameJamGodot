@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://che6yst00xff8"]
+[gd_scene load_steps=7 format=3 uid="uid://che6yst00xff8"]
 
 [ext_resource type="Script" path="res://assets/Character/GS_Player.gd" id="1_jfaff"]
-[ext_resource type="PackedScene" uid="uid://05pnnlix6g6" path="res://assets/Character/Anims/Mesh_Cha_Tpose.fbx" id="2_rwttv"]
+[ext_resource type="PackedScene" uid="uid://bxh8fmghaqlb4" path="res://assets/Character/Anims/Mesh_Cha_Tpose.fbx" id="2_rwttv"]
+[ext_resource type="PackedScene" uid="uid://3t23n17tgc0b" path="res://assets/Character/Mesh_Sword.fbx" id="3_7oi6c"]
+[ext_resource type="PackedScene" uid="uid://c377xiatqjikv" path="res://assets/Character/Mesh_Shield.fbx" id="4_iv6at"]
+[ext_resource type="AnimationLibrary" uid="uid://pl31aii0sjq" path="res://assets/Character/Anims/Anim_Cha_Idle.fbx" id="5_5jkt0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_10vsg"]
 radius = 0.320731
@@ -19,22 +22,83 @@ transform = Transform3D(-3.80087e-08, -0.493866, 0.869538, -2.15876e-08, 0.86953
 
 [node name="Mesh_Cha_Tpose" parent="." instance=ExtResource("2_rwttv")]
 
-[node name="Head" parent="Mesh_Cha_Tpose/RootNode/Armatures/Skeleton3D" index="0"]
-transform = Transform3D(-6.11349e-08, -7.26978e-08, -1, -1.78814e-07, 1, -6.37597e-08, 1, 1.11759e-07, -5.75716e-08, -9.31776e-09, -0.0128471, 0.914108)
-bone_idx = 12
+[node name="GeneralSkeleton" parent="Mesh_Cha_Tpose/RootNode/Armatures" index="0"]
+bones/1/position = Vector3(-0.0152218, 0.333547, -0.00216125)
+bones/1/rotation = Quaternion(0, 5.27001e-08, 5.10069e-09, 1)
+bones/2/rotation = Quaternion(-0.00391114, 0.0275909, 0.989717, -0.140297)
+bones/3/rotation = Quaternion(-2.98023e-08, 1, 2.98023e-08, 0)
+bones/4/rotation = Quaternion(7.3757e-08, 0.707107, -0.707107, -1.05367e-08)
+bones/5/rotation = Quaternion(-6.32203e-08, 1, 0, -6.32203e-08)
+bones/7/rotation = Quaternion(2.98023e-08, -8.9407e-08, -1.49012e-08, 1)
+bones/8/rotation = Quaternion(0, -5.96046e-08, 0, 1)
+bones/9/rotation = Quaternion(0.139341, 0.00138214, -0.00982207, 0.990195)
+bones/11/rotation = Quaternion(0, -2.98023e-08, -1.49012e-08, 1)
+bones/17/rotation = Quaternion(0.582899, 0.400285, 0.532691, -0.465017)
+bones/18/rotation = Quaternion(-0.154396, 0.917105, -0.362433, -0.0610162)
+bones/19/rotation = Quaternion(0.531052, -0.466887, 0.602771, 0.369685)
+bones/20/rotation = Quaternion(2.43005e-08, 0.707107, 2.43005e-08, 0.707107)
+bones/22/rotation = Quaternion(0.146814, -0.0545304, -0.343887, 0.925858)
+bones/23/rotation = Quaternion(0.115909, -0.271761, -0.878768, 0.374804)
+bones/24/rotation = Quaternion(4.47035e-08, 1.49012e-08, 1.49012e-08, 1)
+bones/26/rotation = Quaternion(0.394176, 0.703579, 0.0705461, 0.587048)
+bones/27/rotation = Quaternion(-0.0677254, -0.492207, -0.855394, 0.146445)
+bones/28/rotation = Quaternion(-1.49012e-08, 4.47035e-08, 0, 1)
+bones/31/position = Vector3(-0.000427383, 0.100066, -0.000917743)
+bones/31/rotation = Quaternion(-2.98023e-08, -2.98023e-08, -2.98023e-08, 1)
+bones/33/rotation = Quaternion(4.47035e-08, -2.98023e-08, 2.98023e-08, 1)
+bones/34/rotation = Quaternion(-5.96046e-08, 0, 0, 1)
+bones/35/rotation = Quaternion(0, 0, 0, 1)
+bones/37/position = Vector3(-0.00236489, -0.0286568, -0.226568)
+bones/37/rotation = Quaternion(7.45058e-08, 8.9407e-08, -2.98023e-08, 1)
+bones/39/rotation = Quaternion(0.585168, -0.396962, -0.5302, -0.467855)
+bones/40/rotation = Quaternion(-0.0823554, 0.909422, -0.405976, -0.0367644)
+bones/41/rotation = Quaternion(0.223384, 0.670895, -0.18565, 0.682301)
+bones/42/rotation = Quaternion(2.72526e-08, -0.707107, -2.72526e-08, 0.707107)
+bones/44/rotation = Quaternion(0.52738, -0.0460377, 0.0737791, 0.845167)
+bones/45/rotation = Quaternion(0.885699, 0.0670921, -0.0346995, 0.458075)
+bones/46/rotation = Quaternion(1.04308e-07, -2.98023e-08, 2.98023e-08, 1)
+bones/48/rotation = Quaternion(0.391899, -0.508395, -0.491461, 0.58857)
+bones/49/rotation = Quaternion(0.783793, 0.0850575, -0.0663688, 0.611579)
+bones/50/rotation = Quaternion(5.96046e-08, -5.96046e-08, 2.98023e-08, 1)
+bones/53/position = Vector3(-0.000430342, 0.107095, 0.000901851)
+bones/53/rotation = Quaternion(0, 0, 0, 1)
+bones/55/rotation = Quaternion(-1.49012e-08, 2.98023e-08, 1, 1.49012e-08)
+bones/56/rotation = Quaternion(-2.98023e-08, 1, 0, -2.98023e-08)
+bones/57/rotation = Quaternion(2.10734e-08, 0.707107, -0.707107, -2.10734e-08)
+bones/58/rotation = Quaternion(2.00972e-14, 1, 0, 1.60777e-13)
 
-[node name="Hair" parent="Mesh_Cha_Tpose/RootNode/Armatures/Skeleton3D" index="1"]
-transform = Transform3D(-6.11349e-08, -7.26978e-08, -1, -1.78814e-07, 1, -6.37597e-08, 1, 1.11759e-07, -5.75716e-08, -9.31776e-09, -0.0128471, 0.914108)
+[node name="Head" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="0"]
+transform = Transform3D(0.999803, 0.0198367, -3.12311e-07, -0.0190664, 0.960975, -0.275977, -0.00547418, 0.275923, 0.961164, -0.00964636, 0.899706, 0.089878)
+
+[node name="Hair" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="1"]
+transform = Transform3D(0.999803, 0.0198367, -3.12311e-07, -0.0190664, 0.960975, -0.275977, -0.00547418, 0.275923, 0.961164, -0.00964636, 0.899706, 0.089878)
 bone_idx = 13
 
-[node name="Eyes" parent="Mesh_Cha_Tpose/RootNode/Armatures/Skeleton3D" index="2"]
-transform = Transform3D(-6.11349e-08, -7.26978e-08, -1, -1.78814e-07, 1, -6.37597e-08, 1, 1.11759e-07, -5.75716e-08, -9.31776e-09, -0.0128471, 0.914108)
+[node name="Eyes" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="2"]
+transform = Transform3D(0.999803, 0.0198367, -3.12311e-07, -0.0190664, 0.960975, -0.275977, -0.00547418, 0.275923, 0.961164, -0.00964636, 0.899706, 0.089878)
 bone_idx = 14
 
-[node name="Mouth" parent="Mesh_Cha_Tpose/RootNode/Armatures/Skeleton3D" index="3"]
-transform = Transform3D(-6.11349e-08, -7.26978e-08, -1, -1.78814e-07, 1, -6.37597e-08, 1, 1.11759e-07, -5.75716e-08, -9.31776e-09, -0.0128471, 0.914108)
+[node name="Mouth" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="3"]
+transform = Transform3D(0.999803, 0.0198367, -3.12311e-07, -0.0190664, 0.960975, -0.275977, -0.00547418, 0.275923, 0.961164, -0.00964636, 0.899706, 0.089878)
 bone_idx = 15
 
+[node name="BA_Weapon" type="BoneAttachment3D" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="6"]
+transform = Transform3D(0.240167, -0.376982, 0.894542, 0.351943, -0.825001, -0.442165, 0.904686, 0.421021, -0.0654615, -0.341272, 0.254846, 0.0500432)
+bone_name = "weapon_r"
+bone_idx = 51
+
+[node name="Mesh_Sword" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton/BA_Weapon" instance=ExtResource("3_7oi6c")]
+
+[node name="BA_Shield" type="BoneAttachment3D" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton" index="7"]
+transform = Transform3D(0.511203, 0.271694, -0.815386, -0.785594, -0.237078, -0.571521, -0.348589, 0.932725, 0.092246, 0.275537, 0.431747, 0.0755169)
+bone_name = "weapon_l"
+bone_idx = 29
+
+[node name="Mesh_Shield" parent="Mesh_Cha_Tpose/RootNode/Armatures/GeneralSkeleton/BA_Shield" instance=ExtResource("4_iv6at")]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mesh_Cha_Tpose"]
+libraries = {
+"Anim_Cha_Idle": ExtResource("5_5jkt0")
+}
 
 [editable path="Mesh_Cha_Tpose"]
