@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
 @onready var mesh = $Char_Anims
-@onready var animPlayer = $Char_Anims/AnimationPlayer
+@onready var animPlayer = $Char_Anims/AnimationPlaye
+@onready var animTree = $Char_Anims/AnimationTree
 
 @export var rotationSpeed = .15
 const SPEED = 5.0
@@ -24,18 +25,21 @@ func _physics_process(delta):
 		
 		if Input.is_action_pressed("Run"):
 			speed = SPEED_RUN
-			if animPlayer.current_animation != "Run":
-				animPlayer.play("Run")
+			animTree.set("parameters/Transition/transition_request","Run")
+#			if animPlayer.current_animation != "Run":
+#				animPlayer.play("Run")
 		else:
 			speed = SPEED
-			if animPlayer.current_animation != "Walk":
-				animPlayer.play("Walk")
+			animTree.set("parameters/Transition/transition_request","Walk")
+#			if animPlayer.current_animation != "Walk":
+#				animPlayer.play("Walk")
 					
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
-		if animPlayer.current_animation != "Idle":
-			animPlayer.play("Idle")
+		animTree.set("parameters/Transition/transition_request","Idle")
+#		if animPlayer.current_animation != "Idle":
+#			animPlayer.play("Idle")
 			
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
