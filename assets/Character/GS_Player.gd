@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var sfxSteps = $Sfx/Sfx_Step
 @onready var sfxAttack = $Sfx/Sfx_Attack
 @onready var sfxDefend = $Sfx/Sfx_Defend
+@onready var springArm = $SpringArm3D
 
 @export var rotationSpeed = .15
 
@@ -19,7 +20,8 @@ var blendAmount = 0
 func _ready():
 	pass
 
-func _process(delta):	
+@warning_ignore("unused_parameter")
+func _process(delta):
 	# Anims Movement
 	var input_dir = Input.get_vector("move_forward", "move_back", "move_right", "move_left")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -40,12 +42,12 @@ func _process(delta):
 			animTree.set("parameters/Attack/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	
 	# Anim Defend (Blending)
-	if Input.is_action_pressed("Defend"):		
+	if Input.is_action_pressed("Defend"):
 		wasDefending = true
 		blendAmount += 0.1
 		blendAmount = clampf(blendAmount,0,1)
-		animTree.set("parameters/Defend 2/blend_amount",blendAmount)		
-	else: 
+		animTree.set("parameters/Defend 2/blend_amount",blendAmount)
+	else:
 		if blendAmount > 0 and wasDefending:
 			blendAmount -= 0.2
 			blendAmount = clampf(blendAmount,0,1)
@@ -58,7 +60,7 @@ func _process(delta):
 		timer.start()
 	if Input.is_action_just_released("Run"):
 		timer.stop()
-		
+	
 	#Sfx_Defend
 	if Input.is_action_just_pressed("Defend"):
 		sfxDefend.pitch_scale = randf_range(0.8,1.2)
@@ -67,12 +69,11 @@ func _process(delta):
 
 func _physics_process(delta):
 	# Add the gravity.
-	var my_delta = delta * 62.5
 	if not is_on_floor():
-		velocity.y -= 9.8 * delta	
+		velocity.y -= 9.8 * delta
 
 	# Physic movement
-	var input_dir = Input.get_vector("move_forward", "move_back", "move_right", "move_left")
+	var input_dir = Input.get_vector("move_right", "move_left","move_back","move_forward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		var speed = 0
@@ -84,7 +85,7 @@ func _physics_process(delta):
 			
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
-	else:		
+	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
