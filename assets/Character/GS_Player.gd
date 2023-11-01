@@ -2,8 +2,10 @@ extends CharacterBody3D
 
 @onready var mesh = $Char_Anims
 @onready var animTree = $Char_Anims/AnimationTree
-@onready var sfxSteps = $Sfx_Step
-@onready var timer = $Timer
+@onready var timer = $Sfx/Timer
+@onready var sfxSteps = $Sfx/Sfx_Step
+@onready var sfxAttack = $Sfx/Sfx_Attack
+@onready var sfxDefend = $Sfx/Sfx_Defend
 
 @export var rotationSpeed = .15
 
@@ -17,15 +19,11 @@ var blendAmount = 0
 func _ready():
 	pass
 
-
 func _process(delta):	
 	# Anims Movement
 	var input_dir = Input.get_vector("move_forward", "move_back", "move_right", "move_left")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if Input.is_action_just_pressed("Run"):
-		timer.start()
-	if Input.is_action_just_released("Run"):
-		timer.stop()
+
 	if direction:
 		if Input.is_action_pressed("Run"):
 			animTree.set("parameters/Movement/transition_request","Run")
@@ -37,10 +35,12 @@ func _process(delta):
 	# Anim Attack
 	if Input.is_action_pressed("Attack"):
 		if not animTree.get("parameters/Attack/active"):
+			sfxAttack.pitch_scale = randf_range(0.8,1.2)
+			sfxAttack.play()
 			animTree.set("parameters/Attack/request",AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 	
 	# Anim Defend (Blending)
-	if Input.is_action_pressed("Defend"):
+	if Input.is_action_pressed("Defend"):		
 		wasDefending = true
 		blendAmount += 0.1
 		blendAmount = clampf(blendAmount,0,1)
@@ -52,7 +52,17 @@ func _process(delta):
 			animTree.set("parameters/Defend 2/blend_amount",blendAmount)
 			if blendAmount == 0:
 				wasDefending = false
-
+	
+	#Timer Sfx_Run_Steps
+	if Input.is_action_just_pressed("Run"):
+		timer.start()
+	if Input.is_action_just_released("Run"):
+		timer.stop()
+		
+	#Sfx_Defend
+	if Input.is_action_just_pressed("Defend"):
+		sfxDefend.pitch_scale = randf_range(0.8,1.2)
+		sfxDefend.play()
 
 
 func _physics_process(delta):
