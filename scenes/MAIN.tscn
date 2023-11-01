@@ -9,3 +9,5 @@
 
 [node name="Player" parent="." instance=ExtResource("2_us8fc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11845, 0.00133782, 6.33073)
+
+[node name="Music_Env" type="AudioStreamPlayer" parent="."]
