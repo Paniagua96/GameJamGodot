@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var mesh = $Char_Anims
 @onready var animTree = $Char_Anims/AnimationTree
 @onready var sfxSteps = $Sfx_Step
+@onready var timer = $Timer
 
 @export var rotationSpeed = .15
 
@@ -13,10 +14,18 @@ const JUMP_VELOCITY = 4.5
 var wasDefending = false
 var blendAmount = 0
 
+func _ready():
+	pass
+
+
 func _process(delta):	
 	# Anims Movement
 	var input_dir = Input.get_vector("move_forward", "move_back", "move_right", "move_left")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if Input.is_action_just_pressed("Run"):
+		timer.start()
+	if Input.is_action_just_released("Run"):
+		timer.stop()
 	if direction:
 		if Input.is_action_pressed("Run"):
 			animTree.set("parameters/Movement/transition_request","Run")
@@ -78,3 +87,9 @@ func _physics_process(delta):
 func Anim_Evnt_Walk_Steps():
 	sfxSteps.pitch_scale = randf_range(0.8,1.2)
 	sfxSteps.play()
+	
+func Play_Run_StepsSFX():
+	print(timer.time_left)
+	sfxSteps.pitch_scale = randf_range(1,1.3)
+	sfxSteps.play()
+	
