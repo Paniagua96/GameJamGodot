@@ -13,12 +13,25 @@ extends CharacterBody3D
 const SPEED = 5.0
 const SPEED_RUN = 7.0
 const JUMP_VELOCITY = 4.5
+const ZOOM_MAX = 4
+const ZOOM_MIDDLE = 2
+const ZOOM_MIN = 1
+const ZOOM_SPEED = 5
 
 var wasDefending = false
 var blendAmount = 0
+var currentZoom = 0.0
+var lvlZoom = 0
+var targetZoom = 0
+var isZoomingOut = false
+var isZoomingIn = false
+var zoomReachToTarget = false
 
 func _ready():
-	pass
+	var initialZoom = ZOOM_MAX
+	lvlZoom = initialZoom
+	targetZoom = initialZoom
+	currentZoom = initialZoom
 
 @warning_ignore("unused_parameter")
 func _process(delta):
@@ -55,6 +68,24 @@ func _process(delta):
 			if blendAmount == 0:
 				wasDefending = false
 	
+	#Zoom In/Out
+	if Input.is_action_just_released("ZoomIn"):
+		CalculateNextLvlZoomIn()
+		
+		if targetZoom != lvlZoom:
+			zoomReachToTarget = false
+			targetZoom = lvlZoom
+		
+	if Input.is_action_just_released("ZoomOut"):
+		CalculateNextLvlZoomOut()
+		
+		if targetZoom != lvlZoom:
+			zoomReachToTarget = false
+			targetZoom = lvlZoom
+	
+	#Zoom will be apply only if current zoom has not reached to targetZoom
+	ApplyZoom(delta)
+	
 	#Timer Sfx_Run_Steps
 	if Input.is_action_just_pressed("Run"):
 		timer.start()
@@ -65,7 +96,6 @@ func _process(delta):
 	if Input.is_action_just_pressed("Defend"):
 		sfxDefend.pitch_scale = randf_range(0.8,1.2)
 		sfxDefend.play()
-
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -94,7 +124,33 @@ func _physics_process(delta):
 		mesh.rotation.y = lerp_angle(mesh.rotation.y, atan2(velocity.x, velocity.z),rotationSpeed)
 
 	move_and_slide()
-	
+
+# Methods for zoom
+func CalculateNextLvlZoomIn():
+	match lvlZoom:
+		ZOOM_MIDDLE:
+			lvlZoom = ZOOM_MIN
+		ZOOM_MAX:
+			lvlZoom = ZOOM_MIDDLE
+			
+func CalculateNextLvlZoomOut():
+	match lvlZoom:
+		ZOOM_MIN:
+			lvlZoom = ZOOM_MIDDLE
+		ZOOM_MIDDLE:
+			lvlZoom = ZOOM_MAX
+
+func ApplyZoom(delta):
+	if !zoomReachToTarget:
+		if currentZoom > targetZoom:
+			currentZoom -= ZOOM_SPEED * delta
+		elif currentZoom < targetZoom:
+			currentZoom += ZOOM_SPEED * delta
+		
+		zoomReachToTarget = abs(targetZoom - currentZoom) < .02
+		springArm.spring_length = currentZoom
+
+# Methods for sfx
 func Anim_Evnt_Walk_Steps():
 	sfxSteps.pitch_scale = randf_range(0.8,1.2)
 	sfxSteps.play()
