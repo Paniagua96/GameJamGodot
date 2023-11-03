@@ -85,9 +85,9 @@ func _process(delta):
 	ApplyZoom(delta)
 	
 	#Timer Sfx_Run_Steps
-	if Input.is_action_just_pressed("Run"):
+	if Input.is_action_just_pressed("Run") && direction:
 		timer.start()
-	if Input.is_action_just_released("Run"):
+	if Input.is_action_just_released("Run") && direction:
 		timer.stop()
 	
 	#Sfx_Defend
