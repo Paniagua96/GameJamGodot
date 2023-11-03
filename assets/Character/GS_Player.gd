@@ -12,7 +12,6 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const SPEED_RUN = 7.0
-const JUMP_VELOCITY = 4.5
 const ZOOM_MAX = 4
 const ZOOM_MIDDLE = 2
 const ZOOM_MIN = 1
@@ -46,7 +45,7 @@ func _process(delta):
 		animTree.set("parameters/Movement/transition_request","Idle")
 	
 	# Anim Attack
-	if Input.is_action_pressed("Attack"):
+	if Input.is_action_just_pressed("Attack"):
 		if not animTree.get("parameters/Attack/active"):
 			sfxAttack.pitch_scale = randf_range(0.8,1.2)
 			sfxAttack.play()
