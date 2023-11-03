@@ -37,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11845, 0.00133782, 6.33073
 
 [node name="Music_Env" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rew81")
-volume_db = -25.0
+volume_db = -30.0
 autoplay = true
 
 [node name="Vfx_WindDust" type="Node3D" parent="."]
