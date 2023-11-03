@@ -1,7 +1,15 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://h03j35qn7k37"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://h03j35qn7k37"]
 
 [ext_resource type="Texture2D" uid="uid://dbgrg1r56xbod" path="res://assets/Character/Map_Cha.png" id="1_4fo0y"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scqf3"]
+render_priority = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(0.270588, 0.270588, 0.270588, 1)
 
 [resource]
+render_priority = 2
+next_pass = SubResource("StandardMaterial3D_scqf3")
+transparency = 4
 albedo_texture = ExtResource("1_4fo0y")
