@@ -87,7 +87,7 @@ func _process(delta):
 	#Timer Sfx_Run_Steps
 	if Input.is_action_just_pressed("Run") && direction:
 		timer.start()
-	if Input.is_action_just_released("Run") && direction:
+	if Input.is_action_just_released("Run"):
 		timer.stop()
 	
 	#Sfx_Defend
