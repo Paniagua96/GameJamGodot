@@ -1,7 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://gw35c7bfu8yt"]
+[gd_scene load_steps=11 format=3 uid="uid://gw35c7bfu8yt"]
 
 [ext_resource type="PackedScene" uid="uid://3l6x187cjkea" path="res://scenes/Scn_Env.tscn" id="2_d2gis"]
 [ext_resource type="PackedScene" uid="uid://che6yst00xff8" path="res://scenes/Scn_Player.tscn" id="2_us8fc"]
+[ext_resource type="Shader" uid="uid://cbgw1jeejnihn" path="res://assets/Vfx/WindDust/Sha_Vfx_Opaque.tres" id="3_boq3c"]
+[ext_resource type="AudioStream" uid="uid://cg6d8knqlhpg0" path="res://assets/Env Props/Background_Music.mp3" id="3_rew81"]
+[ext_resource type="Texture2D" uid="uid://ccps4glac8g1w" path="res://assets/Vfx/WindDust/T_Vfx_Dust.png" id="4_3rv6v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ptkuk"]
+render_priority = 0
+shader = ExtResource("3_boq3c")
+shader_parameter/MainTex = ExtResource("4_3rv6v")
+
+[sub_resource type="Gradient" id="Gradient_x2ppi"]
+colors = PackedColorArray(1, 1, 1, 0.780392, 1, 1, 1, 0.0313726)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ui5jb"]
+gradient = SubResource("Gradient_x2ppi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dfxq1"]
+lifetime_randomness = 0.36
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 1.8
+damping_max = 0.5
+color = Color(1, 1, 1, 0.137255)
+color_ramp = SubResource("GradientTexture1D_ui5jb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_hwes8"]
 
 [node name="Main" type="Node3D"]
 
@@ -11,3 +36,19 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11845, 0.00133782, 6.33073)
 
 [node name="Music_Env" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rew81")
+volume_db = -25.0
+autoplay = true
+
+[node name="Vfx_WindDust" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76393, 0.624567, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Vfx_WindDust"]
+material_override = SubResource("ShaderMaterial_ptkuk")
+visibility_range_end = 5.0
+amount = 3
+lifetime = 3.0
+speed_scale = 3.86
+transform_align = 2
+process_material = SubResource("ParticleProcessMaterial_dfxq1")
+draw_pass_1 = SubResource("QuadMesh_hwes8")

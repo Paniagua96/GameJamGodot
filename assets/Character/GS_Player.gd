@@ -23,8 +23,6 @@ var blendAmount = 0
 var currentZoom = 0.0
 var lvlZoom = 0
 var targetZoom = 0
-var isZoomingOut = false
-var isZoomingIn = false
 var zoomReachToTarget = false
 
 func _ready():
@@ -71,7 +69,7 @@ func _process(delta):
 	#Zoom In/Out
 	if Input.is_action_just_released("ZoomIn"):
 		CalculateNextLvlZoomIn()
-		
+				
 		if targetZoom != lvlZoom:
 			zoomReachToTarget = false
 			targetZoom = lvlZoom
@@ -156,7 +154,6 @@ func Anim_Evnt_Walk_Steps():
 	sfxSteps.play()
 	
 func Play_Run_StepsSFX():
-	print(timer.time_left)
 	sfxSteps.pitch_scale = randf_range(1,1.3)
 	sfxSteps.play()
 	
